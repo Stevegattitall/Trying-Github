@@ -4,6 +4,9 @@
         <title>Stivoh</title>
         <link rel="website icon" type="jpg" href="mainlogo.jpg">
         <style>
+            body{
+             background: linear-gradient(to right, rgb(74, 55, 79), rgb(104, 29, 104));
+            }
             .logo{
                 text-align: center;
                 margin-left: auto;
@@ -40,6 +43,32 @@
             .btn2{
                 margin-left: 10px;
             }
+            .loading{
+                height: 50px;
+                width: 50px;
+                border:6px solid aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 5px;
+                box-shadow: 0px 0px 8px aqua,0px 0px 8px aqua;
+                animation: 2s loading ease-in-out infinite;
+            }
+            @keyframes loading {
+                0%{
+                    transform: rotateX(0) rotateY(0) rotateZ(0);
+                }
+                25%{
+                    transform: rotateX(180deg) rotateY(0) rotateZ(0);
+
+                }
+                75%{
+                    transform: rotateX(180deg) rotateY(180deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
         </style>
     </head>
     
@@ -51,5 +80,7 @@
     <button class="btn1">Google Search</button>
     <button class="btn2">I'm Feeling Lucky</button>
 </div>
+<div class="loading"></div>
 </html>
+
 
